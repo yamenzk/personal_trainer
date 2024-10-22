@@ -1,9 +1,9 @@
 # Copyright (c) 2024, YZ and contributors
 # For license information, please see license.txt
 
-import frappe
+# import frappe
 from frappe.model.document import Document
-from personal_trainer.custom_methods import fetch_nutritional_info, fetch_image_url
+# from personal_trainer.custom_methods import fetch_nutritional_info, fetch_image_url
 
 class Food(Document):
     pass
