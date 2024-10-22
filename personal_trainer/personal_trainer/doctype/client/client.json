@@ -1,0 +1,294 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "autoname": "hash",
+ "creation": "2024-10-22 01:04:51.063590",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "html_zsbq",
+  "column_break_yqcx",
+  "client_name",
+  "image",
+  "section_break_rrrp",
+  "date_of_birth",
+  "age",
+  "gender",
+  "column_break_wsef",
+  "nationality",
+  "email",
+  "mobile",
+  "target_tab",
+  "height",
+  "weight_goal",
+  "weight_log",
+  "column_break_xhgk",
+  "adjust",
+  "multiplier",
+  "protein_target",
+  "carb_target",
+  "fat_target",
+  "energy_target",
+  "water_target",
+  "last_updated",
+  "preferences_tab",
+  "workout_preference",
+  "workout_split",
+  "column_break_mvsf",
+  "goal",
+  "meal_split",
+  "settings_tab",
+  "column_break_vpwr",
+  "column_break_xitl",
+  "enabled",
+  "force_weight_update",
+  "enable_preference_change",
+  "column_break_yxuw"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "label": "Client Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Autocomplete",
+   "label": "Nationality",
+   "options": "\nAfghanistan\nAlbania\nAlgeria\nAndorra\nAngola\nAntigua and Barbuda\nArgentina\nArmenia\nAustralia\nAustria\nAzerbaijan\nThe Bahamas\nBahrain\nBangladesh\nBarbados\nBelarus\nBelgium\nBelize\nBenin\nBhutan\nBolivia\nBosnia and Herzegovina\nBotswana\nBrazil\nBrunei\nBulgaria\nBurkina Faso\nBurundi\nCambodia\nCameroon\nCanada\nCape Verde\nCentral African Republic\nChad\nChile\nChina\nColombia\nComoros\nCongo, Republic of the\nCongo, Democratic Republic of the\nCosta Rica\nCote d'Ivoire\nCroatia\nCuba\nCyprus\nCzech Republic\nDenmark\nDjibouti\nDominica\nDominican Republic\nEast Timor (Timor-Leste)\nEcuador\nEgypt\nEl Salvador\nEquatorial Guinea\nEritrea\nEstonia\nEthiopia\nFiji\nFinland\nFrance\nGabon\nThe Gambia\nGeorgia\nGermany\nGhana\nGreece\nGrenada\nGuatemala\nGuinea\nGuinea-Bissau\nGuyana\nHaiti\nHonduras\nHungary\nIceland\nIndia\nIndonesia\nIran\nIraq\nIreland\nIsrael\nItaly\nJamaica\nJapan\nJordan\nKazakhstan\nKenya\nKiribati\nKorea, North\nKorea, South\nKosovo\nKuwait\nKyrgyzstan\nLaos\nLatvia\nLebanon\nLesotho\nLiberia\nLibya\nLiechtenstein\nLithuania\nLuxembourg\nMacedonia\nMadagascar\nMalawi\nMalaysia\nMaldives\nMali\nMalta\nMarshall Islands\nMauritania\nMauritius\nMexico\nMicronesia, Federated States of\nMoldova\nMonaco\nMongolia\nMontenegro\nMorocco\nMozambique\nMyanmar (Burma)\nNamibia\nNauru\nNepal\nNetherlands\nNew Zealand\nNicaragua\nNiger\nNigeria\nNorway\nOman\nPakistan\nPalau\nPalestine\nPanama\nPapua New Guinea\nParaguay\nPeru\nPhilippines\nPoland\nPortugal\nQatar\nRomania\nRussia\nRwanda\nSaint Kitts and Nevis\nSaint Lucia\nSaint Vincent and the Grenadines\nSamoa\nSan Marino\nSao Tome and Principe\nSaudi Arabia\nSenegal\nSerbia\nSeychelles\nSierra Leone\nSingapore\nSlovakia\nSlovenia\nSolomon Islands\nSomalia\nSouth Africa\nSouth Sudan\nSpain\nSri Lanka\nSudan\nSuriname\nSwaziland\nSweden\nSwitzerland\nSyria\nTaiwan\nTajikistan\nTanzania\nThailand\nTogo\nTonga\nTrinidad and Tobago\nTunisia\nTurkey\nTurkmenistan\nTuvalu\nUganda\nUkraine\nUnited Arab Emirates\nUnited Kingdom\nUnited States of America\nUruguay\nUzbekistan\nVanuatu\nVatican City (Holy See)\nVenezuela\nVietnam\nYemen\nZambia\nZimbabwe"
+  },
+  {
+   "fieldname": "column_break_wsef",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height (cm)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "preferences_tab",
+   "fieldtype": "Tab Break",
+   "label": "Preferences"
+  },
+  {
+   "fieldname": "workout_preference",
+   "fieldtype": "Select",
+   "label": "Workout Preference",
+   "options": "\nHome\nGym"
+  },
+  {
+   "fieldname": "workout_split",
+   "fieldtype": "Select",
+   "label": "Workout Split",
+   "options": "\n3-Day Split\n4-Day Split\n5-Day Split\n6-Day Split"
+  },
+  {
+   "fieldname": "column_break_mvsf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "goal",
+   "fieldtype": "Select",
+   "label": "Goal",
+   "options": "\nWeight Loss\nWeight Gain\nMuscle Building"
+  },
+  {
+   "fieldname": "meal_split",
+   "fieldtype": "Select",
+   "label": "Meal Split",
+   "options": "\n3-Meal Split\n4-Meal Split\n5-Meal Split\n6-Meal Split"
+  },
+  {
+   "fieldname": "settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Settings"
+  },
+  {
+   "fieldname": "column_break_vpwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xitl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_yxuw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xhgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "adjust",
+   "fieldtype": "Check",
+   "label": "Adjust"
+  },
+  {
+   "fieldname": "protein_target",
+   "fieldtype": "Int",
+   "label": "Protein Target (g)",
+   "read_only_depends_on": "eval:!doc.adjust"
+  },
+  {
+   "fieldname": "carb_target",
+   "fieldtype": "Int",
+   "label": "Carb Target (g)",
+   "read_only_depends_on": "eval:!doc.adjust"
+  },
+  {
+   "fieldname": "fat_target",
+   "fieldtype": "Int",
+   "label": "Fat Target (g)",
+   "read_only_depends_on": "eval:!doc.adjust"
+  },
+  {
+   "fieldname": "energy_target",
+   "fieldtype": "Int",
+   "label": "Energy Target (g)",
+   "read_only_depends_on": "eval:!doc.adjust"
+  },
+  {
+   "fieldname": "water_target",
+   "fieldtype": "Int",
+   "label": "Water Target (mL)",
+   "read_only_depends_on": "eval:!doc.adjust"
+  },
+  {
+   "default": "0",
+   "fieldname": "force_weight_update",
+   "fieldtype": "Check",
+   "label": "Force Weight Update"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_preference_change",
+   "fieldtype": "Check",
+   "label": "Enable Preference Change"
+  },
+  {
+   "fieldname": "target_tab",
+   "fieldtype": "Tab Break",
+   "label": "Targets"
+  },
+  {
+   "fieldname": "weight_goal",
+   "fieldtype": "Float",
+   "label": "Weight Goal (Kg)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "html_zsbq",
+   "fieldtype": "HTML",
+   "options": "<img src=\"{{doc.image}}\" style=\"width:250px; border-radius:12px;\">"
+  },
+  {
+   "fieldname": "column_break_yqcx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:!doc.image",
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "section_break_rrrp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "weight_log",
+   "fieldtype": "Table",
+   "label": "Weight Log (Kg)",
+   "options": "Weight Log"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Read Only",
+   "label": "Age"
+  },
+  {
+   "default": "1",
+   "fieldname": "multiplier",
+   "fieldtype": "Float",
+   "label": "Multiplier",
+   "non_negative": 1,
+   "precision": "1"
+  },
+  {
+   "fieldname": "last_updated",
+   "fieldtype": "Datetime",
+   "label": "Last Updated",
+   "read_only_depends_on": "eval:!doc.adjust"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-22 02:44:53.419052",
+ "modified_by": "Administrator",
+ "module": "Personal Trainer",
+ "name": "Client",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "client_name"
+}

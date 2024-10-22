@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_rename": 1,
+ "autoname": "field:title",
+ "creation": "2024-10-21 23:51:17.947511",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "duration",
+  "price",
+  "enabled",
+  "column_break_nzla",
+  "workout_plan",
+  "food_plan",
+  "consultation",
+  "consultation_sessions"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Duration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "non_negative": 1,
+   "precision": "0",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_nzla",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "workout_plan",
+   "fieldtype": "Check",
+   "label": "Workout Plan"
+  },
+  {
+   "default": "0",
+   "fieldname": "food_plan",
+   "fieldtype": "Check",
+   "label": "Food Plan"
+  },
+  {
+   "default": "0",
+   "fieldname": "consultation",
+   "fieldtype": "Check",
+   "label": "Consultation"
+  },
+  {
+   "depends_on": "eval:doc.consultation",
+   "fieldname": "consultation_sessions",
+   "fieldtype": "Int",
+   "label": "Consultation Sessions",
+   "mandatory_depends_on": "eval:doc.consultation",
+   "non_negative": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-21 23:58:34.285781",
+ "modified_by": "Administrator",
+ "module": "Personal Trainer",
+ "name": "Subscription Package",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager Coach",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Coach",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

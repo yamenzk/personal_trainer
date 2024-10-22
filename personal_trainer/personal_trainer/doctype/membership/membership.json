@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "autoname": "hash",
+ "creation": "2024-10-22 02:38:16.743710",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "column_break_nppf",
+  "subscription_package",
+  "workout_plan",
+  "food_plan",
+  "column_break_nczr",
+  "start",
+  "end",
+  "enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "link_filters": "[[\"Client\",\"enabled\",\"=\",1]]",
+   "options": "Client"
+  },
+  {
+   "fieldname": "column_break_nppf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscription_package",
+   "fieldtype": "Link",
+   "label": "Subscription Package",
+   "link_filters": "[[\"Subscription Package\",\"enabled\",\"=\",1]]",
+   "options": "Subscription Package"
+  },
+  {
+   "fieldname": "column_break_nczr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End"
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "default": "0",
+   "fetch_from": "subscription_package.workout_plan",
+   "fieldname": "workout_plan",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Workout Plan",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "subscription_package.food_plan",
+   "fieldname": "food_plan",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Food Plan",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-22 02:43:40.064301",
+ "modified_by": "Administrator",
+ "module": "Personal Trainer",
+ "name": "Membership",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

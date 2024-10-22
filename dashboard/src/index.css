@@ -1,0 +1,365 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+}
+
+@keyframes float {
+0%, 100% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-20px);
+}
+}
+
+@keyframes blob {
+0% {
+  transform: translate(0px, 0px) scale(1);
+}
+33% {
+  transform: translate(30px, -50px) scale(1.1);
+}
+66% {
+  transform: translate(-20px, 20px) scale(0.9);
+}
+100% {
+  transform: translate(0px, 0px) scale(1);
+}
+}
+
+.animate-float {
+animation: float 6s ease-in-out infinite;
+}
+
+.animate-blob {
+animation: blob 7s infinite;
+}
+@layer components {
+    .nav-button {
+      @apply w-10 h-10 flex items-center justify-center rounded-xl
+             transition-all duration-200
+             text-gray-600 dark:text-gray-300
+             hover:bg-brand/10 hover:text-brand
+             active:scale-95
+             focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2
+             dark:focus:ring-offset-gray-800;
+    }
+  }
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  /* Root Variables */
+  :root {
+    --app-height: 100vh;
+    --header-height: 64px;
+    --footer-height: 72px;
+    --sidebar-width: 280px;
+    --page-padding: 16px;
+    color-scheme: dark;
+  }
+  
+  /* Base Styles */
+  @layer base {
+    /* Reset & Defaults */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      @apply transition-colors duration-200;
+    }
+  
+    /* HTML & Body Setup */
+    html {
+      @apply bg-light-bg dark:bg-dark-bg;
+      overscroll-behavior-y: none;
+    }
+  
+    body {
+      @apply text-light-text-primary dark:text-dark-text-primary antialiased overflow-hidden;
+      height: var(--app-height);
+    }
+  
+    /* Typography */
+    h1 {
+      @apply text-2xl font-bold tracking-tight mb-2;
+    }
+  
+    h2 {
+      @apply text-xl font-semibold mb-2;
+    }
+  
+    h3 {
+      @apply text-lg font-medium mb-1;
+    }
+  
+    p {
+      @apply text-light-text-secondary dark:text-dark-text-secondary;
+    }
+  
+    a {
+      @apply text-brand hover:text-brand-600 transition-colors duration-200;
+    }
+  }
+  
+  /* Component Styles */
+  @layer components {
+    /* Glass Effects */
+    .glass-light {
+      @apply bg-light-card/80 backdrop-blur-lg border-b border-light-border/50;
+    }
+  
+    .glass-dark {
+      @apply bg-dark-card/80 backdrop-blur-lg border-b border-dark-border/50;
+    }
+  
+    /* Button Styles */
+    .press-effect {
+      @apply transition-all duration-200 active:scale-95 select-none;
+    }
+  
+    .ios-button {
+      @apply rounded-xl px-6 py-3 font-medium select-none
+             transition-all duration-200 ease-out active:scale-95
+             disabled:opacity-50 disabled:cursor-not-allowed
+             focus:outline-none focus:ring-2 focus:ring-offset-2;
+    }
+  
+    .ios-button-primary {
+      @apply ios-button bg-brand text-white
+             hover:bg-brand-600 active:bg-brand-700
+             disabled:bg-brand-300 dark:disabled:bg-brand-800
+             focus:ring-brand/50;
+    }
+  
+    .ios-button-secondary {
+      @apply ios-button bg-light-hover dark:bg-dark-hover 
+             text-light-text-primary dark:text-dark-text-primary
+             hover:bg-light-active dark:hover:bg-dark-active
+             focus:ring-gray-400/50;
+    }
+  
+    /* Input Styles */
+    .ios-input {
+      @apply w-full px-4 py-3 rounded-xl 
+             bg-light-hover dark:bg-dark-hover 
+             text-light-text-primary dark:text-dark-text-primary
+             border-0 outline-none 
+             focus:ring-2 focus:ring-brand
+             transition-all duration-200 ease-out
+             placeholder:text-light-text-tertiary dark:placeholder:text-dark-text-tertiary;
+    }
+  
+    /* Card Styles */
+    .ios-card {
+      @apply rounded-2xl bg-light-card dark:bg-dark-card 
+             shadow-sm dark:shadow-none
+             border border-light-border dark:border-dark-border
+             transition-all duration-200 ease-out hover:border-brand/20;
+    }
+  
+    /* Navigation Styles */
+    .nav-icon-button {
+      @apply w-10 h-10 flex items-center justify-center 
+             rounded-full bg-light-hover dark:bg-dark-hover 
+             text-light-text-secondary dark:text-dark-text-secondary
+             hover:bg-light-active dark:hover:bg-dark-active
+             active:scale-95 transition-all duration-200;
+    }
+  
+    /* Layout Utilities */
+    .page-container {
+      @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+  
+    .section-spacing {
+      @apply space-y-6;
+    }
+  
+    .main-content {
+      @apply flex-1 overflow-y-auto;
+      height: calc(100vh - var(--header-height) - var(--footer-height));
+    }
+  
+    /* Status Badges */
+    .status-badge {
+      @apply px-2.5 py-0.5 rounded-full text-sm font-medium inline-flex items-center;
+    }
+  
+    .status-badge-success {
+      @apply status-badge bg-status-success-bg dark:bg-status-success-dark-bg 
+             text-status-success-text dark:text-status-success-dark-text;
+    }
+  
+    .status-badge-error {
+      @apply status-badge bg-status-error-bg dark:bg-status-error-dark-bg 
+             text-status-error-text dark:text-status-error-dark-text;
+    }
+  
+    .status-badge-warning {
+      @apply status-badge bg-status-warning-bg dark:bg-status-warning-dark-bg 
+             text-status-warning-text dark:text-status-warning-dark-text;
+    }
+  
+    .status-badge-info {
+      @apply status-badge bg-status-info-bg dark:bg-status-info-dark-bg 
+             text-status-info-text dark:text-status-info-dark-text;
+    }
+  }
+  
+  /* Scrolling Behavior */
+  .smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* iOS Height Fix */
+  @supports (-webkit-touch-callout: none) {
+    .h-screen {
+      height: var(--app-height);
+    }
+  }
+  
+  /* Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-in {
+    animation: fade-in 0.3s ease-out forwards;
+  }
+  
+  .animate-out {
+    animation: fade-out 0.3s ease-in forwards;
+  }
+  
+  .slide-in {
+    animation: slide-in 0.3s ease-out forwards;
+  }
+  
+  .slide-out {
+    animation: slide-out 0.3s ease-in forwards;
+  }
+  
+  /* Page Transitions */
+  .page-transition {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .page-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  .page-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  
+  .page-exit {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  
+  .page-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  /* Toast Animations */
+  @keyframes toast-in {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes toast-out {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  
+  .toast-enter {
+    animation: toast-in 0.3s ease-out forwards;
+  }
+  
+  .toast-exit {
+    animation: toast-out 0.3s ease-in forwards;
+  }
+
+  @keyframes progress-line {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  
+  .animate-progress-line {
+    animation: progress-line 3s linear forwards;
+  }

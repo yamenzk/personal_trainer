@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "autoname": "field:fdcid",
+ "creation": "2024-10-23 00:46:27.603167",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fdcid",
+  "enabled",
+  "column_break_madl",
+  "image",
+  "section_break_gqso",
+  "title",
+  "category",
+  "description",
+  "column_break_qnwn",
+  "nutritional_facts"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "fdcid",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "FDCID",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_madl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image",
+   "make_attachment_public": 1
+  },
+  {
+   "fieldname": "section_break_gqso",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_qnwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nutritional_facts",
+   "fieldtype": "Table",
+   "label": "Nutritional Facts",
+   "options": "Nutritional Facts"
+  }
+ ],
+ "hide_toolbar": 1,
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-23 00:52:59.028661",
+ "modified_by": "Administrator",
+ "module": "Personal Trainer",
+ "name": "Food",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager Coach",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}
